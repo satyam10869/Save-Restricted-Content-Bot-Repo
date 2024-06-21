@@ -168,7 +168,7 @@ async def remove_thumbnail(event):
 
 
 M = "/plan"
-PREMIUM_PIC = "plan.png"
+PREMIUM_PIC = "plan.jpg"
 PRE_TEXT = """💰 **Premium Price**: Starting from $2 or 200 INR accepted via **__Amazon Gift Card__** (terms and conditions apply).
 📥 **Download Limit**: Users can download up to 100 files in a single batch command.
 🛑 **Batch**: You will get two modes /bulk and /batch.
