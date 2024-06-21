@@ -30,7 +30,7 @@ import subprocess
 # OWNER_ID = 7065117445 # edit this
 # LOG_GROUP = -1001878947221 # edit this
 
-MDB = "mongodb+srv://ggn:ggn@ggn.upuljx5.mongodb.net/?retryWrites=true&w=majority&appName=ggn"
+MDB = "mongodb+srv://satyamyt10869:Sumit10869@cluster0.0ojjo0p.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 MONGODB_CONNECTION_STRING = config("MONGODB", default=MDB)
 # MongoDB database name and collection name
 DB_NAME = "start_users"
@@ -65,8 +65,7 @@ async def start(event):
     collection.update_one({"user_id": user_id}, {"$set": {"user_id": user_id}}, upsert=True)
     # Creating inline keyboard with one button
     buttons = [
-        [Button.url("Join Channel", url="https://t.me/devggn")],
-        [Button.url("Contact Me", url="https://t.me/ggnhere")],
+        [Button.url("⭐ Join Channel ⭐", url="https://t.me/official_satyam01")],
     ]
     # Sending photo with caption and buttons
     await gagan.send_file(
@@ -141,8 +140,8 @@ async def get_registered_users_command(event):
     os.remove(filename)  # Remove the temporary file after sending
 
 S = "/start"
-START_PIC = "https://graph.org/file/1dfb96bd8f00a7c05f164.gif"
-TEXT = "Send me the Link of any message of Restricted Channels to Clone it here.\nFor private channel's messages, send the Invite Link first.\n\n👉🏻 Execute /batch for bulk process upto 10K files range."
+START_PIC = "https://graph.org/file/5e03ce82519cb95379e68.jpg"
+TEXT = "👋 𝗛𝗶, 𝗜 𝗮𝗺 [𝐏𝐫𝐢𝐯𝐚𝐭𝐞 𝐕𝐢𝐝𝐞𝐨 𝐒𝐚𝐯𝐞 𝐁𝐨𝐭 🖲️](https://telegram.me/private_Video_Save_Bot)\n\n👉🏻 **Execute /batch for bulk process upto 10k files range.**"
 
 @gagan.on(events.NewMessage(func=lambda event: event.photo))
 async def save_photo_as_thumbnail(event):
@@ -181,7 +180,7 @@ PRE_TEXT = """💰 **Premium Price**: Starting from $2 or 200 INR accepted via *
 async def plan_command(event):
     # Creating inline keyboard with buttons
     buttons = [
-        [Button.url("Send Gift Card Code", url="https://t.me/ttonehelpbot")]
+        [Button.url("Send Gift Card Code", url="https://t.me/s_r_c_help_bot")]
     ]
 
     # Sending photo with caption and buttons
@@ -204,8 +203,8 @@ TERM_TEXT = """📜 **Terms and Conditions** 📜\n
 async def term_command(event):
     # Creating inline keyboard with buttons
     buttons = [
-        [Button.url("Query?", url="https://t.me/ttonehelpbot"),
-         Button.url("Channel", url="https://telegram.dog/devggn")]
+        [Button.url("Query?", url="https://t.me/s_r_c_help_bot"),
+         Button.url("Channel", url="https://telegram.dog/official_satyam01")]
     ]
 
     # Sending photo with caption and buttons
@@ -216,11 +215,9 @@ async def term_command(event):
         buttons=buttons
     )
 
-REPO_URL = "https://github.com/devgaganin/Save-Restricted-Content-Bot-Repo/"
+REPO_URL = "https://t.me/official_satyam01"
 
 HELP_TEXT = """Here are the available commands:
-
-➡️ /fwd - Setup forward process from public channels or private channels (your bot must be admin in private channels to clone). Follow the on-screen instructions for setup.
 
 ➡️ /bulk - to process link one by one iterating through single single message ids.
 
@@ -256,12 +253,6 @@ No need to add -100 in the userid.
 
 ➡️ /cancel - Cancel ongoing batch process.
 
-➡️ /host - host your own Save Restricted Bot with all features available in this bot.
-
-```Use: /host BOT_TOKEN SESSION```
-
-➡️ /unhost - to unhost the hosted bots (remember this will unhost both bot at once if you hosted both bots)
-
 ➡️ /plan - View our plan details.
 
 ➡️ /terms - View our premium terms.
@@ -279,7 +270,7 @@ t = increase_timer_value (this sets the timer value to increase i.e after every 
 
 Note: To set your custom thumbnail just sent photo/image without anycommand or else.
 
-[GitHub Repository](%s)
+[๛𝐌𝐑๛𝐒𝐀𝐓𝐘𝐀𝐌๛](%s)
 """ % REPO_URL
 
 
@@ -289,7 +280,7 @@ async def help_command(event):
     Command to display help message
     """
     # Creating inline keyboard with a button linking to the GitHub repository
-    buttons = [[Button.url("REPO", url=REPO_URL)]]
+    buttons = [[Button.url("๛𝐌𝐑๛𝐒𝐀𝐓𝐘𝐀𝐌๛", url=REPO_URL)]]
 
     # Sending the help message with the GitHub repository button
     await event.respond(HELP_TEXT, buttons=buttons, link_preview=False)
@@ -354,7 +345,7 @@ async def youtube_dl_command(_, message):
 
             # Get video metadata
             metadata = video_metadata(original_file)
-            caption = f"{video_info['title']}\n\n__**Powered by [Advance Content Saver Bot](https://t.me/advance_content_saver_bot)**__"  # Set caption to the title of the video
+            caption = f"{video_info['title']}\n\n__**Powered by [𝐏𝐫𝐢𝐯𝐚𝐭𝐞 𝐕𝐢𝐝𝐞𝐨 𝐒𝐚𝐯𝐞 𝐁𝐨𝐭 🖲️](https://telegram.me/private_Video_Save_Bot)**__"  # Set caption to the title of the video
             
             # Send the video file and thumbnail
             ggn = message.chat.id
