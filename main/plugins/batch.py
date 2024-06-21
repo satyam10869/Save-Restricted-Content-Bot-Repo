@@ -27,7 +27,7 @@ logger = logging.getLogger(__name__)
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 logging.getLogger("telethon").setLevel(logging.WARNING)
 
-MDB = "mongodb+srv://ggn:ggn@ggn.upuljx5.mongodb.net/?retryWrites=true&w=majority&appName=ggn"
+MDB = "mongodb+srv://satyamyt10869:Sumit10869@cluster0.0ojjo0p.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 MONGODB_CONNECTION_STRING = config("MONGODB", default=MDB)
 
 # MongoDB database name and collection name
@@ -195,7 +195,7 @@ async def _batch(event):
             save_batch_data(batch_data)
 
             cd = await conv.send_message("**Batch process ongoing...**\n\nChunks processed: 0", 
-                                    buttons=[[Button.url("Join Channel", url="http://t.me/devggn")]])
+                                    buttons=[[Button.url("Join Channel", url="http://t.me/official_satyam01")]])
             co, is_canceled = await run_batch(userbot, Bot, user_id, cd, _link) 
             try: 
                 if co == -2:
@@ -268,7 +268,7 @@ async def set_command_handler(event):
             "timer_increase_value": timer_increase_value
         }
 
-        response = f"Settings saved successfully!\n\nBatch Size: {batch_size}\nBase Timer: {base_timer}\nTimer Increase Threshold: {timer_increase_threshold}\nTimer Increase Value: {timer_increase_value}\n\nPowered by **__Team SPY__**"
+        response = f"Settings saved successfully!\n\nBatch Size: {batch_size}\nBase Timer: {base_timer}\nTimer Increase Threshold: {timer_increase_threshold}\nTimer Increase Value: {timer_increase_value}\n\nPowered by **__๛𝐌𝐑๛𝐒𝐀𝐓𝐘𝐀𝐌๛__**"
         return await event.respond(response)
 
     # Your validation checks go here
@@ -296,7 +296,7 @@ async def set_command_handler(event):
         "timer_increase_value": timer_increase_value
     }
 
-    response = f"Settings saved successfully!\n\nBatch Size: {batch_size}\nBase Timer: {base_timer}\nTimer Increase Threshold: {timer_increase_threshold}\nTimer Increase Value: {timer_increase_value}\n\nPowered by **__Team SPY__**"
+    response = f"Settings saved successfully!\n\nBatch Size: {batch_size}\nBase Timer: {base_timer}\nTimer Increase Threshold: {timer_increase_threshold}\nTimer Increase Value: {timer_increase_value}\n\nPowered by **__๛𝐌𝐑๛𝐒𝐀𝐓𝐘𝐀𝐌๛__**"
     await event.respond(response)
 
 
@@ -379,11 +379,11 @@ async def run_batch(userbot, client, sender, countdown, link):
                         logger.info(e)
                         if countdown.text != count_down:
                             await countdown.edit(count_down,
-                                                 buttons=[[Button.url("Join Channel", url="http://t.me/devggn")]])
+                                                 buttons=[[Button.url("Join Channel", url="http://t.me/official_satyam01")]])
             except Exception as e:
                 if countdown.text != count_down:
                     await countdown.edit(count_down,
-                                         buttons=[[Button.url("Join Channel", url="https://t.me/devggn")]])
+                                         buttons=[[Button.url("Join Channel", url="http://t.me/official_satyam01")]])
 
         # Wait for all tasks in the chunk to complete
         await asyncio.gather(*chunk_tasks[str(sender)])
@@ -394,7 +394,7 @@ async def run_batch(userbot, client, sender, countdown, link):
             sleep_message = f"Sleeping for {current_timer} seconds before processing the next batch."
             sleep_msg = await client.send_message(sender, sleep_message)
             # Edit countdown message to show processed value only
-            await countdown.edit(f"**Batch process ongoing...**\n\nProcessed: {processed_ids} Links", buttons=[[Button.url("Join Channel", url="http://t.me/devggn")]])
+            await countdown.edit(f"**Batch process ongoing...**\n\nProcessed: {processed_ids} Links", buttons=[[Button.url("Join Channel", url="http://t.me/official_satyam01")]])
 
             try:
                 await asyncio.sleep(current_timer)  # Sleep for the current timer value
@@ -466,7 +466,7 @@ userbot = Client("myacc",api_id=API_ID,api_hash=API_HASH,session_string=SESSION)
 try:
     userbot.start()
 except BaseException:
-    print("Your session expired please re add that... thanks @devggn.")
+    print("Your session expired please re add that... thanks")
     sys.exit(1)
 
 Bot = Client(
